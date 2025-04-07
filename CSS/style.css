@@ -1,0 +1,480 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    font-family: 'designer';
+    background-color: #000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #7d34cf;
+}
+
+main{
+    font-family: 'mont';
+}
+
+:root{
+    --primary: #7d34cf;
+    --text: #aaaaaa;
+    --primary-light: #ad7fe2;
+    --primary-dark: #4e2083;
+}
+
+/* Fuentes */
+@font-face {
+    font-family: mont;
+    src: url(/Fonts/Mont-ExtraLightDEMO.otf);
+}
+@font-face {
+    font-family: amoria;
+    src: url(/Fonts/AMORIA.otf);
+}
+
+@font-face {
+    font-family: designer;
+    src: url(/Fonts/Designer.otf);
+    font-weight: 900;
+}
+/* Inicio barra busqueda */
+.material-icon{
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+.barra-busqueda{
+    width: 100%;
+    border: inset 2px var(--primary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.barra-busqueda:focus-within{
+    border: solid 1px var(--primary-light);
+    box-shadow: 0px 0px 25px var(--primary-light);
+}
+
+.barra-busqueda input{
+    color: var(--text);
+    background: none;
+    border:none;
+    outline: none;
+    font-size: 18px;
+    flex: auto;
+}
+
+.barra-busqueda input:hover{
+    width: 300px;
+}
+
+.barra-busqueda .acciones{
+    display: flex;
+    gap: 5px;
+}
+
+.barra-busqueda .acciones button{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: #b68ce5;
+}
+
+.barra-busqueda .acciones button:hover{
+    color: #c7ace6;
+
+}
+/* Fin barra busqueda */
+/* Inicio logo, y titulo Lumina */
+img{
+    height: 80px;
+}
+
+.lumina {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: amoria;
+    font-size: 8vh;
+    font-weight: bold;
+    color: #fff;
+}
+
+.lumina:hover{
+    color: var(--primary);
+    transition: color ease-in 0.5s;
+}
+/* Fin logo, y titulo Lumina */
+
+/* Inicio links lists */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.5s ease-in-out;
+    position: relative;
+    text-decoration: none;
+    color: #fff; 
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.5s ease-in-out;
+}
+
+
+
+nav a:hover {
+    color: var(--primary-light);
+    font-size: 24px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--primary-dark); 
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+    transform: scale(1.1);
+}
+
+/* Fin links lists */
+
+/* Inicio entrada */
+.inicio-productos {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('gaming-setup.jpg');
+    background-size: cover;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.inicio-productos h1 {
+    text-shadow: 1px 1px 3px var(--primary-light);
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--primary);
+    transition: transform 0.3s ease-in-out;
+}
+
+.inicio-productos h1:hover{
+    transform: scale(1.1);
+    text-shadow: 0px 0px 25px var(--primary-light);
+}
+
+.inicio-productos p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.btn {
+    background-color: var(--primary-light);
+    color: #000;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+    box-shadow: 0px 0px 25px var(--primary-light);;
+}
+/* Fin entrada */
+
+/* Inicio categorias */
+.categories {
+    background-image: url(/img/Fondo\ J3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.categories h2 {
+    text-shadow: 1px 1px 3px var(--primary-light);
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--primary);
+
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.category-card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-info {
+    padding: 20px;
+}
+
+.category-info h3 {
+    margin-bottom: 10px;
+}
+
+/* Fin categoria */
+
+/* Inicio ofertas */
+.ofertas {
+    padding: 50px 20px;
+    background-color: #1a1a1a;
+}
+
+.ofertas h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--primary);
+}
+
+.oferta-producto {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    width: 300px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+
+
+.product-card:hover {
+    transform: translateY(-10px);
+
+}
+
+.product-card img {
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-color: #121212;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+}
+
+.price-antiguo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #024d02;
+    margin: 15px 0;
+    text-decoration: line-through;
+}
+
+.price-oferta {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ff00;
+    margin: 15px 0;
+}
+
+/* Fin ofertas */
+
+/*  Nosotros */
+.nosotros-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nosotros-text {
+    flex: 1 1 500px;
+    padding: 20px;
+}
+
+.nosotros-text p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.nosotros-img {
+    flex: 1 1 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.nosotros-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.nosotros-h2 h2{  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 3px var(--primary-light);
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--primary);
+}
+
+.nosotros-container .nosotros-img img:hover{
+    border: solid 1px var(--primary-light);
+}
+
+/* Fin Nosotros */
+footer {
+    background-color: #000;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 3px solid  var(--primary);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--primary-light);
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size:24px;
+}
+
+
+
+@media (max-width: 1570px) {
+    .lumina {
+        font-size: 10vw;
+        margin-bottom: 10px;
+    }
+
+    .barra-busqueda{
+        margin-bottom: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .lumina {
+        font-size: 10vw;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .barra-busqueda {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+}
